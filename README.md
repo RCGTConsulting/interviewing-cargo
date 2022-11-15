@@ -12,4 +12,7 @@ This problem is about loading Packages onto Trucks and validating that the Truck
    2. expect `Package.first.update!(truck: Truck.first)` to associate the Package with the Truck
    3. expect `Truck.first.packages` to return the Package that was added to the Truck
 4. add an instance method on Truck called `load` that takes a Package and "puts it on the truck"
+   1. expect `Package.create!(size: 5)` to create and store an instance of Package
+   2. expect `Truck.first.load(Package.last)` to run without error
+   3. expect `Truck.first.packages` to return two Packages, including the Package that was passed to `Truck#load`
 5. add validation on Truck to ensure that the sum of the `size`s of its Packages does not exceed its `capacity`
