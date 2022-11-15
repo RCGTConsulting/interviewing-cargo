@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The Problem
 
-Things you may want to cover:
+This problem is about loading Packages onto Trucks and validating that the Truck can hold the Packages.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. run `rails new cargo` to create a new Rails app
+2. implement a model, Package, with a `size` attribute
+   1. expect `Package.create!(size: 10)` to create and store an instance of Package
+3. implement a model, Truck, that has a `capacity` attribute and many Packages (a Package _may_ be on a Truck, or it may not)
+   1. expect `Truck.create!(capacity: 35)` to create and store an instance of Truck
+   2. expect `Package.first.update!(truck: Truck.first)` to associate the Package with the Truck
+   3. expect `Truck.first.packages` to return the Package that was added to the Truck
+4. add a reference from Package to tr
+5. add an instance method on Truck called `load` that takes a Package and "puts it on the truck"
+6. add validation on Truck to ensure that the sum of the `size`s of its Packages does not exceed its `capacity`
