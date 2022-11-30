@@ -7,7 +7,7 @@
 
   <% @trucks.each do |truck| %>
     <tr>
-      <td><%= truck.id %>
+      <td><%= link_to(truck.id, truck_path(truck)) %>
       <td><%= truck.capacity %>
       <td><%= truck.cargo_size %>
     </tr>
