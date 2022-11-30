@@ -13,3 +13,8 @@
     <th>Cargo Size</th>
     <td><%= @truck.cargo_size %>
   </tr>
+  <tr>
+    <th>Packages</th>
+    <td><%= @truck.packages.map(&:id) %></td>
+  </tr>
+</table>

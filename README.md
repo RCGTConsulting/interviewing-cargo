@@ -53,6 +53,8 @@ truck = Truck.create!(capacity: 10)
    1. expect clicking on an id in the `index` page to take the user to that Truck's `show` page
 3. implement the `show` page, to show the same three attributes as the index page
    1. expect the `show` page to show the attributes
-4. on the `show` page, list the Packages on the Truck
-5. add a Controller for the Package model, with the `index` and `show` actions
+4. on the `show` page, list the ID of each Package on the Truck
+   1. expect the `show` page to show the ID of each Package on the Truck
+5. add a Controller for the Package model, with the `show` action
+   1. 
 6. 
