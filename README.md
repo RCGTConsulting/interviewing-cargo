@@ -15,6 +15,6 @@ This problem is about loading Packages onto Trucks and validating that the Truck
 4. add an instance method on Truck called `load_cargo` that takes a Package and "puts it on the truck"
    1. expect `Truck.first.load_cargo(Package.last)` to run without error
    2. expect `Truck.first.packages` to return two Packages, including the Package that was passed to `Truck#load_cargo`
-5. add validation to ensure that the sum of the `size`s of its Packages does not exceed a Truck's `capacity` when calling `Truck#load_cargo`
+5. add validation to ensure that the sum of the `size`s of its Packages does not exceed a Truck's `capacity`
    1. expect `Package.create!(size: 20) && Truck.first.load_cargo(Package.last)` to create and load_cargo a Package
    2. expect `Package.create!(size: 1) && Truck.first.load_cargo(Package.last)` to create an instance of Package but fail to save the Truck
