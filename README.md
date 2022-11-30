@@ -61,3 +61,6 @@ truck = Truck.create!(capacity: 10)
    1. expect clicking a Package link to take the user to the Package's `show` page
 7. add a JSON response to the `Trucks#show` action
    1. expect `curl -H 'Accept: application/json' http://localhost:3000/trucks/1` to return a JSON hash
+8. have the Packages controller return a 403 Forbidden response if the Package ID is odd (i.e. not an even number)
+   1. expect `/packages/3` to show an error message and not show the package information
+   2. expect `curl -H 'Accept: application/json' http://localhost:3000/packages/3` to return status code 403 and an error message, and not the package information
