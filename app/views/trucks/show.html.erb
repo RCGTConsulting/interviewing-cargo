@@ -15,6 +15,10 @@
   </tr>
   <tr>
     <th>Packages</th>
-    <td><%= @truck.packages.map(&:id) %></td>
+    <td>
+      <% @truck.packages.each do |package| %>
+        <%= link_to(package.id, package_path(package)) %>
+      <% end %>
+    </td>
   </tr>
 </table>

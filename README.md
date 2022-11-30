@@ -59,3 +59,5 @@ truck = Truck.create!(capacity: 10)
    1. expect loading `/packages/1` to show the Package with `id == 1`
 6. make each Package `id` on the `Trucks#show` page a link to that Package's `show` page
    1. expect clicking a Package link to take the user to the Package's `show` page
+7. add a JSON response to the `Trucks#show` action
+   1. expect `curl -H 'Accept: application/json' http://localhost:3000/trucks/1` to return a JSON hash
