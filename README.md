@@ -50,11 +50,12 @@ truck = Truck.create!(capacity: 10)
 1. add a Controller for the Truck model, with the actions `index` and `show`, and implement a View for the `index` action that lists the Trucks from the database, showing the attributes `id`, `capacity`, and `cargo_size` for each Truck
    1. expect http://localhost:3000/trucks/index to render the view and show the three Trucks created in the Setup section
 2. make each `id` attribute in the `index` page a link to the Truck's `show` page
-   1. expect clicking on an id in the `index` page to take the user to that Truck's `show` page
+   1. expect clicking on an id in the `index` page to take the user to the empty `show` page
 3. implement the `show` page, to show the same three attributes as the index page
    1. expect the `show` page to show the attributes
 4. on the `show` page, list the ID of each Package on the Truck
    1. expect the `show` page to show the ID of each Package on the Truck
-5. add a Controller for the Package model, with the `show` action
-   1. 
-6. 
+5. add a Controller for the Package model, with the `show` action, and implement a View for `Packages#show` that displays the Package attributes `id` and `size`
+   1. expect loading `/packages/1` to show the Package with `id == 1`
+6. make each Package `id` on the `Trucks#show` page a link to that Package's `show` page
+   1. expect clicking a Package link to take the user to the Package's `show` page
