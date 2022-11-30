@@ -1,0 +1,15 @@
+<h1>Trucks#index</h1>
+
+<table>
+  <th>Id</td>
+  <th>Capacity</td>
+  <th>Cargo Size</th>
+
+  <% @trucks.each do |truck| %>
+    <tr>
+      <td><%= truck.id %>
+      <td><%= truck.capacity %>
+      <td><%= truck.cargo_size %>
+    </tr>
+  <% end %>
+</table>
