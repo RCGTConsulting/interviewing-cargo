@@ -15,6 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_184410) do
     t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "truck_id"
+    t.index ["truck_id"], name: "index_packages_on_truck_id"
   end
 
   create_table "trucks", force: :cascade do |t|
